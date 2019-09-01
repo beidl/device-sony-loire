@@ -184,5 +184,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # telepathy-ofono quirks
 PRODUCT_PROPERTY_OVERRIDES += \
-    t-o.quirk.forcesinkprimary=1 \
-    t-o.quirk.forcesourceprimary=1
+    t-o.quirk.forcesink=sink.primary \
+    t-o.quirk.forcesource=source.primary
