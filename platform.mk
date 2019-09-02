@@ -66,6 +66,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
 
+# Ubuntu Touch timekeeper support
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/halium/etc/init/timekeeper.conf:system/halium/etc/init/timekeeper.conf
+
 # Ubuntu Touch Mir/hybris integration
 PRODUCT_PACKAGES += \
     libaudioflingerglue \
