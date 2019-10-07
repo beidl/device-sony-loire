@@ -9,3 +9,7 @@ for i in 1 2 3 4 5; do
         break
     fi
 done
+
+echo ":)" > /sys/power/wake_lock
+sleep 1
+echo ":)" > /sys/power/wake_unlock
