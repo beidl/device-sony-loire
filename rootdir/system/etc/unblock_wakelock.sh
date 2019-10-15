@@ -10,6 +10,9 @@ for i in 1 2 3 4 5; do
     fi
 done
 
-echo ":)" > /sys/power/wake_lock
-sleep 1
-echo ":)" > /sys/power/wake_unlock
+# The kernel has problems properly entering suspend
+# so just keep the device up for now.
+
+echo "keep_susp_alive" > /sys/power/wake_lock
+#sleep 1
+#echo "keep_susp_alive" > /sys/power/wake_unlock
