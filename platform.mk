@@ -70,6 +70,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/halium/etc/init/timekeeper.conf:system/halium/etc/init/timekeeper.conf
 
+# Ubuntu Touch/ofono LTE support
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/halium/etc/init/ofono.override:system/halium/etc/init/ofono.override
+
 # Ubuntu Touch wakelock unblocking
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/unblock_wakelock.sh:system/etc/unblock_wakelock.sh
