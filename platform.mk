@@ -85,6 +85,10 @@ PRODUCT_PACKAGES += \
     miniafservice \
     minimediaservice
 
+# Ubuntu Touch camera support
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.HAL3.enabled=0
+
 # QCOM netmgrd support
 PRODUCT_PACKAGES += \
     librmnetctl \
