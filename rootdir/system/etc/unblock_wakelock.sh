@@ -13,6 +13,6 @@ done
 # The kernel has problems properly entering suspend
 # so just keep the device up for now.
 
-echo "keep_susp_alive" > /sys/power/wake_lock
+#echo "keep_susp_alive" > /sys/power/wake_lock
 #sleep 1
 #echo "keep_susp_alive" > /sys/power/wake_unlock
