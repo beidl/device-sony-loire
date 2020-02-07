@@ -66,6 +66,12 @@ service minimedia /system/bin/minimediaservice
 on property:init.svc.sensorservice=running
     start unblock_wakelock
 
+service enable_dual_sim /system/bin/sh /system/etc/enable_dual_sim.sh
+    class core
+    user root
+    group root
+    oneshot
+
 service unblock_wakelock /system/bin/sh /system/etc/unblock_wakelock.sh
     class main
     user root

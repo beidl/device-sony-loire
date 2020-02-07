@@ -6,8 +6,13 @@ stop on stopping dbus
 expect fork
 respawn
 
-env OFONO_RIL_RAT_LTE=1
-env OFONO_RIL_DEVICE=ril
-env OFONO_RIL_NUM_SIM_SLOTS=1
+script
+	export OFONO_RIL_RAT_LTE=1
+	export OFONO_RIL_DEVICE=ril
+	export OFONO_RIL_NUM_SIM_SLOTS=1
 
-exec ofonod -P provision,udev*,dun*,smart*,hfp_bluez5,stktest,sap
+	cat /proc/cmdline | grep -E "oemandroidboot\.phoneid=[^ ,]+,[^ ,]+" && \
+		export OFONO_RIL_NUM_SIM_SLOTS=2
+
+	exec ofonod -P provision,udev*,dun*,smart*,hfp_bluez5,stktest,sap
+end script
