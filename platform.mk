@@ -78,6 +78,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/unblock_wakelock.sh:system/etc/unblock_wakelock.sh
 
+# Ubuntu Touch F5122 Dual-Sim enabling
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/etc/enable_dual_sim.sh:system/etc/enable_dual_sim.sh
+
 # Ubuntu Touch Mir/hybris integration
 PRODUCT_PACKAGES += \
     libaudioflingerglue \
