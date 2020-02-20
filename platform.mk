@@ -82,6 +82,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/enable_dual_sim.sh:system/etc/enable_dual_sim.sh
 
+# Ubuntu Touch repowerd override (auto brightness, etc.)
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/halium/usr/share/powerd/device_configs/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml
+
 # Ubuntu Touch Mir/hybris integration
 PRODUCT_PACKAGES += \
     libaudioflingerglue \
