@@ -86,13 +86,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/halium/usr/share/powerd/device_configs/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml
 
-# Ubuntu Touch Mir/hybris integration
-PRODUCT_PACKAGES += \
-    libaudioflingerglue \
-    libminisf \
-    miniafservice \
-    minimediaservice
-
 # Ubuntu Touch camera support
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0
