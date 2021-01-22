@@ -198,3 +198,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi MAC address path
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.wifi.addr_path=/sys/devices/soc/soc:bcmdhd_wlan/macaddr
+
+# Interactive/powersave scheduling switcher
+PRODUCT_PACKAGS += \
+    libpowerswitch
+
+# Enable libpowerswitch
+PRODUCT_PROPERTY_OVERRIDES += \
+    ubuntu.booster.dl=/system/lib64/libpowerswitch.so \
+    ubuntu.booster.enable=set_screen_on \
+    ubuntu.booster.disable=set_screen_off
