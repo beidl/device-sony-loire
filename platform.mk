@@ -200,8 +200,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.wifi.addr_path=/sys/devices/soc/soc:bcmdhd_wlan/macaddr
 
 # Interactive/powersave scheduling switcher
-PRODUCT_PACKAGS += \
-    libpowerswitch
+PRODUCT_PACKAGES += \
+    libpowerswitch \
+    powerswitch
 
 # Enable libpowerswitch
 PRODUCT_PROPERTY_OVERRIDES += \
